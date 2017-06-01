@@ -2,7 +2,6 @@ package com.codecool.krk20161.javase.model;
 
 import com.codecool.krk20161.javase.model.library.AlreadyInCatalogException;
 import com.codecool.krk20161.javase.model.library.Catalog;
-//import com.codecool.krk2061.javase.exception.AlreadyInCatalogException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -104,37 +103,36 @@ class CatalogTest {
 
             assertEquals(new ArrayList<Book>(), this.catalog.searchByAuthor(author));
         }
-//
-//        @Test
-//        @DisplayName("Book is removed by title")
-//        void testBookIsRemoved() {
-//            Author author = new Author("Dex Choudhury");
-//            Book bookToRemove = new Book("Aliens Without Flaws", author);
-//            this.catalog.remove(bookToRemove);
-//
-//            assertEquals(4, this.catalog.getBooks().size());
-//        }
-//
-//        @Test
-//        @DisplayName("Book is not found after is removed")
-//        void testBookNotFoundAfterIsRemoved() {
-//            Author author = new Author("Dex Choudhury");
-//            Book bookToRemove = new Book("Aliens Without Flaws", author);
-//            this.catalog.remove(bookToRemove);
-//
-//            assertEquals(new ArrayList<Book>(), this.catalog.searchByTitle(bookToRemove.getTitle()));
-//        }
-//
-//        @Test
-//        @DisplayName("Book is not removed when title and author doesn't match")
-//        void testBookNotRemovedIdTitleAndAuthorNotEquals() {
-//            Author author = new Author("Unknown");
-//            Book bookToRemove = new Book("Aliens Without Flaws", author);
-//            this.catalog.remove(bookToRemove);
-//
-//            assertEquals(5, this.catalog.getBooks().size());
-//        }
-//    }
-//
+
+        @Test
+        @DisplayName("Book is removed by title")
+        void testBookIsRemoved() {
+            Author author = new Author("Dex Choudhury");
+            Book bookToRemove = new Book("Aliens Without Flaws", author);
+            this.catalog.remove(bookToRemove);
+
+            assertEquals(4, this.catalog.getBooks().size());
+        }
+
+        @Test
+        @DisplayName("Book is not found after is removed")
+        void testBookNotFoundAfterIsRemoved() {
+            Author author = new Author("Dex Choudhury");
+            Book bookToRemove = new Book("Aliens Without Flaws", author);
+            this.catalog.remove(bookToRemove);
+
+            assertEquals(new ArrayList<Book>(), this.catalog.searchByTitle(bookToRemove.getTitle()));
+        }
+
+        @Test
+        @DisplayName("Book is not removed when title and author doesn't match")
+        void testBookNotRemovedIdTitleAndAuthorNotEquals() {
+            Author author = new Author("Unknown");
+            Book bookToRemove = new Book("Aliens Without Flaws", author);
+            this.catalog.remove(bookToRemove);
+
+            assertEquals(5, this.catalog.getBooks().size());
+        }
     }
+
 }

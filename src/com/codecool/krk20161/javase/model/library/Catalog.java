@@ -27,7 +27,7 @@ public class Catalog {
             title.add(checkbook.getTitle());
         }
             if (title.contains(book.getTitle())) {
-                throw new AlreadyInCatalogException();
+                throw new com.codecool.krk20161.javase.model.library.AlreadyInCatalogException();
             } else {
                 this.books.add(book);
             }
@@ -55,4 +55,13 @@ public class Catalog {
         return bookByAuthor;
     }
 
+    public void remove(Book bookToRemove) {
+        for (Book book : this.books) {
+            if (book.getTitle().equals(bookToRemove.getTitle()) &&
+                book.getAuthor().getName().equals(bookToRemove.getAuthor().getName())) {
+                this.books.remove(book);
+            }
+        }
+    }
 }
+
