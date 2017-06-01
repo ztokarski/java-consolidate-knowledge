@@ -1,6 +1,6 @@
 package com.codecool.krk20161.javase.model;
 
-import com.codecool.krk20161.javase.model.library.AlreadyInCatalogException;
+import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
 import com.codecool.krk20161.javase.model.library.Catalog;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,5 @@
 package com.codecool.krk20161.javase.model.library;
+import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
 import com.codecool.krk20161.javase.model.Book;
 import com.codecool.krk20161.javase.model.Author;
 import java.util.ArrayList;
@@ -11,7 +12,6 @@ public class Catalog {
     public Catalog() {
         setBooks(books);
     }
-
 
     private void setBooks(ArrayList<Book> books) {
         this.books = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Catalog {
             title.add(checkbook.getTitle());
         }
             if (title.contains(book.getTitle())) {
-                throw new com.codecool.krk20161.javase.model.library.AlreadyInCatalogException();
+                throw new AlreadyInCatalogException();
             } else {
                 this.books.add(book);
             }
