@@ -24,10 +24,6 @@ public class Reader {
     }
 
 
-    public void setRead(ArrayList<Book> read) {
-        this.read = new ArrayList<>();
-    }
-
     public String getName() {
         return name;
     }
@@ -51,8 +47,6 @@ public class Reader {
         return bookByTitle;
     }
 
-
-
     public List<Book> searchByAuthor(Author author) {
         List<Book> bookByAuthor = new ArrayList<>();
 
@@ -63,9 +57,4 @@ public class Reader {
         }return bookByAuthor;
     }
 
-
-    @Override
-    public String toString() {
-        return getRead().toString();
-    }
 }
