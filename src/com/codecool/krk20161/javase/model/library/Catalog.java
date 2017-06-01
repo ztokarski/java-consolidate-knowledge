@@ -12,6 +12,7 @@ public class Catalog {
         setBooks(books);
     }
 
+
     private void setBooks(ArrayList<Book> books) {
         this.books = new ArrayList<>();
     }
@@ -21,9 +22,16 @@ public class Catalog {
     }
 
     public void add(Book book) {
-        this.books.add(book);
-    }
-
+        List<String>title=new ArrayList<>();
+        for (Book checkbook : this.books) {
+            title.add(checkbook.getTitle());
+        }
+            if (title.contains(book.getTitle())) {
+                throw new AlreadyInCatalogException();
+            } else {
+                this.books.add(book);
+            }
+        }
 
     public List<Book> searchByTitle(String title) {
         List<Book> bookByTitle = new ArrayList<>();
@@ -46,4 +54,5 @@ public class Catalog {
         }
         return bookByAuthor;
     }
+
 }
