@@ -5,7 +5,7 @@ import com.codecool.krk20161.javase.model.Author;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Catalog {
+public class Catalog implements BookFinder {
 
     private ArrayList<Book> books;
 
@@ -13,7 +13,7 @@ public class Catalog {
         setBooks(books);
     }
 
-    private void setBooks(ArrayList<Book> books) {
+    public void setBooks(ArrayList<Book> books) {
         this.books = new ArrayList<>();
     }
 
@@ -33,6 +33,7 @@ public class Catalog {
             }
         }
 
+    @Override
     public List<Book> searchByTitle(String title) {
         List<Book> bookByTitle = new ArrayList<>();
 
@@ -44,6 +45,7 @@ public class Catalog {
         return bookByTitle;
     }
 
+    @Override
     public List<Book> searchByAuthor(Author author) {
         List<Book> bookByAuthor = new ArrayList<>();
 

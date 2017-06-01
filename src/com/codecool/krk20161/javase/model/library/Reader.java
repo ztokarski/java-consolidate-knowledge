@@ -5,7 +5,7 @@ import com.codecool.krk20161.javase.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader {
+public class Reader implements BookFinder{
     private String name;
     private List<Book> read;
 
@@ -36,6 +36,7 @@ public class Reader {
         return read;
     }
 
+    @Override
     public List<Book> searchByTitle(String title) {
         List<Book> bookByTitle = new ArrayList<>();
 
@@ -47,6 +48,7 @@ public class Reader {
         return bookByTitle;
     }
 
+    @Override
     public List<Book> searchByAuthor(Author author) {
         List<Book> bookByAuthor = new ArrayList<>();
 
