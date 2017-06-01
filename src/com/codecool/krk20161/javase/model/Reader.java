@@ -3,31 +3,22 @@ package com.codecool.krk20161.javase.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader implements BookFinder{
+public class Reader extends Person implements BookFinder{
     private String name;
     private List<Book> read;
 
     public Reader(String name) {
-        setName(name);
+        super(name);
         this.read = new ArrayList<>();
     }
 
     public Reader(String name, List<Book> read) {
-        setName(name);
+        super(name);
         setRead(read);
     }
 
     public void setRead(List<Book> read) {
         this.read = read;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public List<Book> getRead() {
