@@ -1,7 +1,5 @@
-package com.codecool.krk20161.javase.model.library;
+package com.codecool.krk20161.javase.model;
 
-import com.codecool.krk20161.javase.model.Author;
-import com.codecool.krk20161.javase.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 

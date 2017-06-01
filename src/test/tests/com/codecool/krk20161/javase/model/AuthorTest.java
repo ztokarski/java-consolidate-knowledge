@@ -1,7 +1,6 @@
 package com.codecool.krk20161.javase.model;
 
-
-
+import com.codecool.krk20161.javase.model.Author;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

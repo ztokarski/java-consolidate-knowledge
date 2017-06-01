@@ -1,5 +1,7 @@
 package com.codecool.krk20161.javase.model;
 
+import com.codecool.krk20161.javase.model.Author;
+
 public class Book {
     private String title;
     private Author author;

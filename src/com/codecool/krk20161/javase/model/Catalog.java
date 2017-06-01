@@ -1,7 +1,5 @@
-package com.codecool.krk20161.javase.model.library;
+package com.codecool.krk20161.javase.model;
 import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
-import com.codecool.krk20161.javase.model.Book;
-import com.codecool.krk20161.javase.model.Author;
 import java.util.ArrayList;
 import java.util.List;
 
