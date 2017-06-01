@@ -40,8 +40,4 @@ public class Book {
         this.summary = summary;
     }
 
-    @Override
-    public String toString() {
-        return getTitle();
-    }
 }
