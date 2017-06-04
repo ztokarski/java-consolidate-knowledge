@@ -3,6 +3,7 @@ package com.codecool.krk20161.javase.model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Reader extends Person implements BookFinder{
     private String name;
     private List<Book> read;
@@ -33,8 +34,7 @@ public class Reader extends Person implements BookFinder{
             if (book.getTitle().equals(title)) {
                 bookByTitle.add(book);
             }
-        }
-        return bookByTitle;
+        } return bookByTitle;
     }
 
     @Override
@@ -45,7 +45,6 @@ public class Reader extends Person implements BookFinder{
             if (book.getAuthor().getName().equals(author.getName())){
                 bookByAuthor.add(book);
             }
-        }return bookByAuthor;
+        } return bookByAuthor;
     }
-
 }
