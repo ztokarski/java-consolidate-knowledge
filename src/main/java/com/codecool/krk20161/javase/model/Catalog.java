@@ -1,7 +1,9 @@
 package com.codecool.krk20161.javase.model;
+
 import com.codecool.krk20161.javase.exception.AlreadyInCatalogException;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Catalog implements BookFinder {
 
@@ -20,16 +22,16 @@ public class Catalog implements BookFinder {
     }
 
     public void add(Book book) {
-        List<String>title=new ArrayList<>();
+        List<String> title = new ArrayList<>();
         for (Book checkbook : this.books) {
             title.add(checkbook.getTitle());
         }
-            if (title.contains(book.getTitle())) {
-                throw new AlreadyInCatalogException();
-            } else {
-                this.books.add(book);
-            }
+        if (title.contains(book.getTitle())) {
+            throw new AlreadyInCatalogException();
+        } else {
+            this.books.add(book);
         }
+    }
 
     @Override
     public List<Book> searchByTitle(String title) {
@@ -63,5 +65,6 @@ public class Catalog implements BookFinder {
             }
         }
     }
+
 }
 

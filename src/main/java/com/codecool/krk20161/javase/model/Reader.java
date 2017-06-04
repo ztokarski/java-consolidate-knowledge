@@ -3,8 +3,8 @@ package com.codecool.krk20161.javase.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Reader extends Person implements BookFinder{
-    private String name;
+public class Reader extends Person implements BookFinder {
+
     private List<Book> read;
 
     public Reader(String name) {
@@ -45,7 +45,8 @@ public class Reader extends Person implements BookFinder{
             if (book.getAuthor().getName().equals(author.getName())){
                 bookByAuthor.add(book);
             }
-        }return bookByAuthor;
+        }
+        return bookByAuthor;
     }
 
 }
