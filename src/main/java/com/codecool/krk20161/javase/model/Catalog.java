@@ -41,7 +41,8 @@ public class Catalog implements BookFinder {
             if (book.getTitle().equals(title)) {
                 bookByTitle.add(book);
             }
-        } return bookByTitle;
+        }
+        return bookByTitle;
     }
 
     @Override
@@ -52,7 +53,8 @@ public class Catalog implements BookFinder {
             if (book.getAuthor().getName().equals(author.getName())) {
                 bookByAuthor.add(book);
             }
-        } return bookByAuthor;
+        }
+        return bookByAuthor;
     }
 
     public void remove(Book bookToRemove) {
@@ -63,5 +65,6 @@ public class Catalog implements BookFinder {
             }
         }
     }
+
 }
 

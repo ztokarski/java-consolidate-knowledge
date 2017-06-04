@@ -1,8 +1,5 @@
 package com.codecool.krk20161.javase.model;
 
-import com.codecool.krk20161.javase.model.Author;
-import com.codecool.krk20161.javase.model.Book;
-import com.codecool.krk20161.javase.model.Reader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -33,14 +30,14 @@ class ReaderTest {
         assertEquals(0, reader.getRead().size());
     }
 
-//    @Test
-//    @DisplayName("Read list of book is set by constructor")
-//    void testReadIsSetByConstructor() {
-//        List<Book> read = new ArrayList<Book>();
-//        Reader reader = new Reader(null, read);
-//
-//        assertSame(read, reader.getRead());
-//    }
+    @Test
+    @DisplayName("Read list of book is set by constructor")
+    void testReadIsSetByConstructor() {
+        List<Book> read = new ArrayList<Book>();
+        Reader reader = new Reader(null, read);
+
+        assertSame(read, reader.getRead());
+    }
 
     @Nested
     @DisplayName("with some read books")

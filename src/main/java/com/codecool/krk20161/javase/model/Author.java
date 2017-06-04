@@ -1,8 +1,7 @@
 package com.codecool.krk20161.javase.model;
 
-
 public class Author extends Person {
-    private String name;
+
     private String biography;
 
     public Author(String name) {
@@ -21,4 +20,5 @@ public class Author extends Person {
     public void setBiography(String biography) {
         this.biography = biography;
     }
+
 }

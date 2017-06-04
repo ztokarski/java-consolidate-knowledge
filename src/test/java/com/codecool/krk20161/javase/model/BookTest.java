@@ -1,13 +1,11 @@
 package com.codecool.krk20161.javase.model;
 
-import com.codecool.krk20161.javase.model.Author;
-import com.codecool.krk20161.javase.model.Book;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
 

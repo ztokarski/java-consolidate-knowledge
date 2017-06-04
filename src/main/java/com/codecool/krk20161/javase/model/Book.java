@@ -1,7 +1,7 @@
 package com.codecool.krk20161.javase.model;
 
-
 public class Book {
+
     private String title;
     private Author author;
     private String summary;
@@ -40,4 +40,5 @@ public class Book {
     public void setSummary(String summary) {
         this.summary = summary;
     }
+
 }
